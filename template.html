@@ -1,0 +1,150 @@
+<style>
+  .picture {
+   margin-bottom: 1px;
+   width: 210px;
+   height:210px;
+   display:block;
+  }
+ .linkdedin {
+   margin-bottom: 1px;
+   width: 212px;
+   height:42px;
+   display:block;
+   background:transparent url('[@PATH]btn-normal.png') center top no-repeat;
+  }
+  .linkdedin:hover {
+   background-image: url('[@PATH]btn-hover.png');
+ }
+ .linkdedin:active {
+   background-image: url('[@PATH]btn-active.png');
+ }
+ .github {
+   margin-bottom: 1px;
+   width: 212px;
+   height:42px;
+   display:block;
+   background:transparent url('[@PATH]btn-github-normal.png') center top no-repeat;
+  }
+  .github:hover {
+   background-image: url('[@PATH]btn-github-hover.png');
+ }
+ .github:active {
+   background-image: url('[@PATH]btn-github-active.png');
+ }
+
+
+ /*tabs*/
+ /*
+CSS for the main interaction
+*/
+.tabset > input[type="radio"] {
+ position: absolute;
+ left: -200vw;
+}
+
+.tabset .tab-panel {
+ display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+ display: block;
+}
+
+/*
+Styling
+*/
+
+.tabset > label {
+ position: relative;
+ display: inline-block;
+ padding: 1px 15px 15px;
+ border: 1px solid transparent;
+ border-bottom: 0;
+ cursor: pointer;
+ font-weight: 300;
+}
+
+.tabset > label::after {
+ content: "";
+ position: absolute;
+ left: 15px;
+ bottom: 10px;
+ width: 32px;
+ height: 4px;
+ background: #8d8d8d;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+ color: #004d99;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+ background: #1ac6ff;
+}
+
+
+.tab-panel {
+ padding: 15px 0;
+ border-top: 1px solid #ccc;
+}
+
+/*
+Demo purposes only
+*/
+*,
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+
+.tabset {
+ max-width: 65em;
+}
+ </style>
+
+<img src="[@PATH]profile.png" class="picture">
+<a href="https://www.linkedin.com/in/adriano-ara%C3%BAjo-costa-14881827/" target="_balnk" class="linkdedin" title="Linkedin link"></a>
+<a href="https://github.com/adrianoapi" target="_balnk" class="github" title="Github link"></a>
+
+<hr>
+
+<div class="tabset">
+ <!-- Tab 1 -->
+ <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+ <label for="tab1"><img src="[@PATH]usa.png"></label>
+ <!-- Tab 2 -->
+ <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+ <label for="tab2"><img src="[@PATH]brazil.png"></label>
+
+ <div class="tab-panels">
+
+   <section id="marzen" class="tab-panel">
+     <p><strong>Quote:</strong> The day I learned nothing was a lost day.</p>
+     <p><strong>History:</strong> ...</p>
+ </section>
+
+   <section id="rauchbier" class="tab-panel">
+     <p><strong>Citação:</strong>  O dia em que não aprendi nada foi um dia perdido.</p>
+     <p><strong>Biografia:</strong> ...</p>
+   </section>
+ 
+ </div>
+ 
+</div>
+
+<div style="display:none">
+  <img src="[@PATH]btn-hover.png" alt="">
+  <img src="[@PATH]btn-active.png" alt="">
+  <img src="[@PATH]btn-normal.png" alt="">
+  <img src="[@PATH]btn-github-hover.png" alt="">
+  <img src="[@PATH]btn-github-active.png" alt="">
+  <img src="[@PATH]btn-github-normal.png" alt="">
+</div>
