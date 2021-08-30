@@ -39,6 +39,7 @@ function bio_init()
       "isActive" => true,
       "english" => $_POST['bio_english'],
       "portuguese" => $_POST['bio_portuguese'],
+      "image" => $_POST['image'],
     ];
 
     $fp = fopen(__DIR__.'/db/database.json', 'w');
@@ -57,6 +58,7 @@ function bio_init()
   $content = str_replace('[@PATH]', $path, $content);
   $content = str_replace('[@bio_english]', $json['english'], $content);
   $content = str_replace('[@bio_portuguese]', $json['portuguese'], $content);
+  $content = str_replace('[@IMAGE_PERFIL]', $json['image'], $content);
   
   echo $content;
 
@@ -73,6 +75,7 @@ function bio_register_results()
     $content = file_get_contents(__DIR__."/view/template.html");
     $content = str_replace('[@PANEL_CONTENT_EN]', $json['english'], $content);
     $content = str_replace('[@PANEL_CONTENT_PT]', $json['portuguese'], $content);
+    $content = str_replace('[@IMAGE_PERFIL]', $json['image'], $content);
 
     return str_replace('[@PATH]', $path, $content);
 

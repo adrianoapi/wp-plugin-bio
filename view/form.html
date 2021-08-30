@@ -41,7 +41,10 @@ textarea {
 <center><h1>[@TITLE]</h1></center>
 
 <form action="./admin.php?[@ACTION]" method="post">
-    
+    <div>
+        <label for="msg">src Image</label>
+        <input id="image" name="image" placeholder="/image" value="[@IMAGE_PERFIL]">
+    </div>
     <div>
         <label for="msg"><img src="[@PATH]usa.png"></label>
         <textarea id="bio_english" name="bio_english" placeholder="English bio" cols="60">[@bio_english]</textarea>
